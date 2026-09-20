@@ -1,15 +1,15 @@
 [submodule "vendor/proot"]
 	path = vendor/proot
-	url = git@github.com:proot-me/proot.git
+	url = https://github.com/proot-me/proot.git
 [submodule "vendor/termux-proot-distro"]
 	path = vendor/termux-proot-distro
 	url = https://github.com/termux/proot-distro.git
 [submodule "vendor/termux-proot"]
 	path = vendor/termux-proot
-	url = git@github.com:termux/proot.git
+	url = https://github.com/termux/proot.git
 [submodule "vendor/samba"]
 	path = vendor/samba
-	url = git@github.com:samba-team/samba.git
+	url = https://github.com/samba-team/samba.git
 [submodule "vendor/termlib"]
 	path = vendor/termlib
 	url = https://github.com/oonid/termlib.git
@@ -18,7 +18,7 @@
 	url = https://android.googlesource.com/platform/bionic
 [submodule "vendor/busybox"]
 	path = vendor/busybox
-	url = git://busybox.net/busybox.git
+	url = https://git.busybox.net/busybox.git
 [submodule "vendor/musl"]
 	path = vendor/musl
-	url = git://git.musl-libc.org/musl
+	url = https://git.musl-libc.org/cgit/musl.git

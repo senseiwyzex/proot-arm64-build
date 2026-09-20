@@ -1,0 +1,36 @@
+name: Build patched PRoot ARM64
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: false
+
+      - name: Fetch Samba dependency
+        run: git submodule update --init vendor/samba
+
+      - name: Build PRoot
+        run: |
+          chmod +x scripts/build.sh
+          scripts/build.sh --arch=arm64
+
+      - name: Verify
+        run: |
+          ls -lah build/out/arm64/
+          file build/out/arm64/proot
+          file build/out/arm64/loader
+
+      - name: Upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: proot-arm64
+          path: |
+            build/out/arm64/proot
+            build/out/arm64/loader
